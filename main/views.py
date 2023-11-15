@@ -17,7 +17,6 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
 @login_required(login_url='/login')
-
 def show_main(request):
     products = Product.objects.filter(user=request.user)
 
